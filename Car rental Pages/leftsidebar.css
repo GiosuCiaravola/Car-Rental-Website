@@ -1,0 +1,45 @@
+/*Creazione della sidebar con gli elementi disposti in verticale in posizione fissa. 
+Qualora l'utente dovesse scrollare la pagina la sidebar non si muoverà*/
+.leftsidebar{
+    flex-direction: column;
+    width: 100px;
+    height: 100%;
+    background-color: white;
+    border-right: 2px solid black;
+    position: fixed;
+    z-index: 20;
+}
+
+.leftsidebar button{
+    align-items: center;
+    margin:10px;
+    padding: 10px;
+    height: 100px;
+    border:none;
+    background-color: white;
+    z-index: 21;
+}
+
+.leftsidebar button:hover{
+    background-color: rgb(150, 154, 157);
+    border-bottom: 2px solid black;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.leftsidebar button[id="menu"]{
+    align-items: center;
+    margin:10px;
+    padding: 10px;
+    height: 50px;
+}
+
+.leftsidebar img{
+    align-items: center;
+    width: 50%;
+}
+
+.leftsidebar p{
+    color:rgb(24, 24, 43);
+}

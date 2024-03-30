@@ -1,0 +1,136 @@
+/*Sezione globale per impostare il font del testo nella pagina*/
+* {
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+
+body {
+    margin:0px;
+    padding:0px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Permette all'h1 dell'header di adattarsi al rimpicciolimento della finestra. Se questa è più piccola dei 900px la scritta si rimpicciolisce*/
+@media screen and (max-width:900px) {
+    .header h1{
+        font-size: 30px;
+        color: white;
+        margin-left:60px;
+    }
+}
+
+/*Stile dei tutti i tag di classe vehicle*/
+.vehicle {
+    padding: 20px;
+    text-align: center;
+    margin: 40px 15px;
+}
+
+/*Stile del contenitore del veicolo con i suoi dati*/
+div.vehicle {
+    flex: 1;
+    padding: 5px;
+    margin-left:105px;
+    margin-bottom: 60px;
+    border: 3px solid #17172a;
+    border-radius: 25px;
+    box-shadow: 7px 7px 7px #888888;
+}
+
+img.vehicle {
+    float: left;
+    width: 30%;
+    height: auto;
+    margin: 0px auto; 
+}
+
+.vehicle h1{
+    font-size: 70px;
+    margin-top: 20px;
+    color:red;
+    border:none;
+}
+
+.vehicle h2{
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    clear: both;
+}
+
+.vehicle h2>span{
+    font-size: 40px;
+    color:red;
+}
+
+p.descrizione{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+/*Stile del div contenente la patente necessaria, il numero di posti e la targa del veicolo*/
+.informazioni{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informazioni img{
+    width: 15%;
+    margin: 0px 15px;   
+}
+
+.informazioni p{
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+/*Tendina che appare se si passa col cursore del mouse su: patente necessaria, numero di posti, e targa del veicolo */
+.tendinacontainer{
+    position: relative;
+    display: inline-block;
+}
+
+.tendinainfo{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left:37%;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.tendinainfo p{
+    font-size: 13px;
+    color:white;
+    padding: 7px 0px;
+}
+
+.tendinacontainer:hover .tendinainfo{
+    display: block;
+}
+
+/*Stile del pulsante di noleggio*/
+#acquista{
+    background-color:#17172a;
+    color:white;
+    font-size: large;
+    width: 150px;
+    margin: 50px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#acquista:hover{
+    background-color: #009dff;
+    cursor:pointer;
+}

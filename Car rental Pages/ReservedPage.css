@@ -1,0 +1,140 @@
+/*Sezione globale per impostare il font del testo nella pagina*/
+* {
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+
+body {
+    margin:0px;
+    padding:0px;
+}
+
+/*Sezione che conterrà il container delle informazioni personali dell'utente*/
+.maincontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 100px;
+    padding: 5%;
+    border: 2px solid black;
+    box-shadow: 3px 3px 5px #888888;
+    border-radius: 10px;
+}
+
+.leftcolumn, .rightcolumn, .paymentcolumn{
+    /*Con flex-basis specifichiamo la dimensione di base di un elemento flessibile lungo l'asse principale(riga)
+    In questo caso indichiamo che l'elemento flessibile avrà una dimensione del 33,33% 
+    della dimensione disponibile sull'asse centrale meno 20 pixel*/
+    flex-basis: calc(33.33% - 20px);        
+    margin-bottom: 20px;
+}
+
+.leftcolumn h2, .rightcolumn h2, .paymentcolumn h2{
+    text-decoration: underline;
+}
+
+/*Creazione del singolo div per inserire le informazioni dei noleggi effettuati*/
+.vehicle {
+    padding: 20px;
+    text-align: center;
+    flex-direction: row;
+    margin: 40px 15px;
+    flex: 1;
+    flex-direction: row;
+    padding: 35px;
+    margin-left:105px;
+    margin-bottom: 60px;
+    border: 3px solid #17172a;
+    box-shadow: 7px 7px 7px #888888;
+}
+  
+img.vehicle {
+    float: left;
+    width: 30%;
+    height: auto;
+    margin: 0px auto; 
+}
+
+.vehicle h1{
+    font-size: 70px;
+    margin-top: 20px;
+    color:red;
+    border:none;
+}
+
+.vehicle h2, .vehicle p{
+    display: inline;
+}
+
+.vehicle h2{
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    clear: both;
+}
+
+.vehicle p{
+    font-size: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px
+}
+
+/*Stile per la scritta di nessun noleggio effettuato*/
+div.nonoleggio{
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+p.nonoleggio{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+/*Stile per i tre tipi di esito (Terminato, Inizio a breve e in corso)*/
+p.esito{
+    font-size: 35px;
+}
+
+/*Stile del pulsante di modifica veicoli*/
+button.modifybutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: #172a1f;
+    font-size: 20px;
+    color: white;   
+    border-radius: 10px;
+    padding: auto;
+    cursor:pointer;
+}
+
+a#modifybutton{
+    text-decoration: none;
+}
+
+button.modifybutton:hover{
+    background-color: #009dff;
+}
+
+/*Permette alla scritta principale di adattarsi al rimpicciolimento della finestra. Se questa è più piccola dei 1300px la scritta si rimpicciolisce*/
+@media screen and (max-width:1300px) {
+    p.nonoleggio{
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 30px;
+        margin-left: 130px;
+    }
+}

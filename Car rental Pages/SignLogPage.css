@@ -1,0 +1,182 @@
+/*Sezione globale per impostare il font del testo nella pagina*/
+*{
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    margin:0px;
+    padding:0px;
+}
+
+h3,label{
+    color: #172a21;
+    font-weight: bold;
+} 
+
+/*Container che conterrà i div di registrazione e di login*/
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 30px;
+    border: 2px solid;
+}
+
+/*Stile del div che contiene i due pulsanti di registrazione e di login*/
+.selection{
+    display: flex;
+    flex-direction: row; 
+    position: absolute;
+    top: 0%;  
+}
+
+/*Stile dei pulsanti di registrazione e di login*/
+.selection button{
+    width: 180px;
+    height: 50px;
+    background-color: #ffffff;
+    font-size: 20px;
+    border-radius: 15px;
+    color: #172a1f;
+    margin:20px;
+}
+
+.selection button:hover{
+    background-color: #434382;
+    cursor: pointer;
+}
+
+/*Faccio in modo tale che i due div siano posizionati nello stesso punto*/
+.loginpage, .signUpPage{
+    position: absolute;
+}
+
+.signUpPage{
+    position: absolute;
+    top:20%;
+}
+
+.container h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+.container label{
+    margin-right: 5px;
+}
+
+.container input,select{
+    border-radius: 10px;
+}
+
+/*Con gli z-index posiziono il div di registrazione sopra quello di login e all'occorrenza 
+quando si preme uno dei due pulsanti viene mostrato uno dei due div nascondendo l'altro*/
+.signUpPage{
+    z-index: 2;
+}
+
+.loginPage{
+    z-index: 1;
+}
+
+/*Stile del pulsante di invio dei dati al form*/
+input[type="submit"]{
+    margin-top: 10px;
+    margin-left: 80px;
+    width: 180px;
+    height: 50px;
+    background-color: #172a1f;
+    color: white;
+}
+
+input[type="submit"]:hover{
+    background-color: #434382;
+}
+
+/*Stile degli errori*/
+.errorUtenteLogin, .errorPasswordLogin, .errorUtente {
+    z-index: 1;
+    color: red;
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+}
+
+.errorNumeroPatente, .errorTipoPatenti, .errorPassword, .errorEmail {
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    color: red;
+    visibility: hidden;
+}
+
+.errorEmail {
+    visibility: block;
+}
+
+/*Posizionamento degli errori sovrapposti tra loro*/
+.errorPasswordLogin {
+    z-index: 2;
+}
+
+.errorUtente {
+    z-index: 1;
+}
+
+.errorNumeroPatente {
+    z-index: 3;
+}
+
+.errorTipoPatenti {
+    z-index: 4;
+}
+
+.errorEmail {
+    z-index: 5;
+}
+
+.errorPassword {
+    z-index: 6;
+}
+
+/*Stile del footer*/
+.footer{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    background-color: #17172a;
+    margin-top:40px;
+    box-shadow: 3px 3px 5px #888888;
+    z-index: -1;
+}
+
+.pagedata{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagedata p{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 15px;
+}
+
+
+
+

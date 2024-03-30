@@ -1,0 +1,160 @@
+/*Sezione globale per impostare il font del testo nella pagina*/
+* {
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    margin:0px;
+    padding:0px;
+}
+
+.maincontent h1{
+    font-size: 100px;
+    padding-left:120px;
+    padding-top: 0px;
+    padding-right: 70px;
+    padding-bottom: 0px;
+}
+/*Sezione dedicata all'immagine di sfondo e alla scritta "Noleggia l'auto dei tuoi sogni"*/
+.header2{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+img.mainimage{
+    filter: blur(3px);      /*Proprietà che permette di sfocare l'immagine di sfondo*/
+    width: 100%;
+    z-index: -1;
+}
+
+.scrittaprincipale{
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translate(-50%,-50%);            /*Proprietà che permette la traslazione della scritta al centro dell'immagine di sfondo*/
+    width: 80%;
+    color: #fff;
+    font-size: 100px;
+    background-color: rgb(24, 24, 43, 0.7);
+    padding: 10px;
+    z-index: 1;                                 /*Con z-index la scritta è posizionata sopra l'immagine*/
+}
+
+/*Permette alla scritta principale di adattarsi al rimpicciolimento della finestra. Se questa è più piccola dei 1300px la scritta si rimpicciolisce*/
+@media screen and (max-width:1300px) {          
+    .scrittaprincipale{
+        position: absolute;
+        top:25%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width: 80%;
+        color: #fff;
+        font-size: 50px;
+        background-color: rgb(24, 24, 43, 0.7);
+        padding: 10px;
+        z-index: 1;
+    }
+}
+
+/*Sezione dedicata alle ultime tre auto e tre moto inserite*/
+.new{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top:10px;
+    width: 100%;
+    background-color: #17172a;
+}
+
+.new img{
+    padding: 5px 20px;
+    width: 100px;
+}
+
+p.autoprimopiano, p.motoprimopiano{
+    font-size: 30px;
+    margin-left: 0px;
+    margin-top: 15px;
+    height: 40px;
+    background-color: #17172a;
+    color: white;
+}
+
+.catalogoauto,.catalogomoto {
+    display: flex;   
+}
+
+/*Creazione della griglia per contenere le tre auto in modo tale da posizionare gli elementi sulle righe e colonne*/
+.gridcontainer {
+    margin-top: 30px;
+    display: grid;
+}
+
+/*Creazione della riga della griglia con uno spazio tra le celle (20px) con tre colonne della stessa grandezza */
+.gridrow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+/*Creazione della singola cella*/
+div.vehicle {
+    padding: 5px;
+    margin-left:105px;
+    margin-bottom: 60px;
+    padding: 20px;
+    text-align: center;
+    border: 3px solid #17172a;
+    box-shadow: 7px 7px 7px #888888;   
+}
+
+/*Effetto di selezione quando il cursore del mouse passa sulla cella del veicolo*/
+div.vehicle:hover {
+    box-shadow: 15px 15px 15px #888888;
+}
+
+/*Posizionamento dell'immagine sulla sinistra della cella*/
+img.vehicle {
+    float: left;
+    width: 50%;
+    height: auto;
+    margin: 0px auto; 
+}
+
+.vehicle h2{
+    color: #17172a;
+}
+
+/*Definizione dello stile del nome di ogni veicolo*/
+.catalogoauto h1, .catalogomoto h1{
+    font-size: 30px;
+    padding-right: 5px;
+    text-decoration: underline;
+    color:red;
+    border:none;
+}
+
+.catalogoauto h2, .catalogomoto h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    clear: both;              /*Con questa proprietà permettiamo di non far allineare gli elementi della cella*/
+}
+
+/*Creazione del pulsante del noleggio*/
+#acquista{
+    background-color:#17172a;
+    color:white;
+    font-size: large;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#acquista:hover{
+    background-color: #009dff;
+}

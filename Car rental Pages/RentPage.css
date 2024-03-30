@@ -1,0 +1,57 @@
+/*Sezione globale per impostare il font del testo nella pagina*/
+* {
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+
+body {
+    margin:0px;
+    padding:0px;
+}
+
+/*Creazione del container che conterrà il form*/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/*Stile dei fieldset, legend e pulsante di acquisto*/
+fieldset{
+    width: 500px;
+    border: 2px solid #172a1f;
+    border-radius: 20px;
+}
+
+legend{
+    color:#009dff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+input[id="invioAcquisto"]{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    margin-top:15px;
+    margin-left: 170px;
+    border-radius: 10px;
+    background-color: #172a1f;
+    font-size: 20px;
+    color: white; 
+}
+
+input[id="invioAcquisto"]:hover{
+    background-color: #009dff;
+}
+
+/*Stile degli errori*/
+.errorScadenzaCarta, .errorDataFine, #errorPatenteNonAmmessa {
+    text-align: center;
+    visibility: hidden;
+    color:red;
+}

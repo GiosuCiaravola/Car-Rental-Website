@@ -1,0 +1,94 @@
+/*Creazione dell'header come flexbox*/
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;     /*posizionamento degli elementi all'interno dell'header distanziati in egual modo*/
+    background-color: rgb(24, 24, 43);
+    box-shadow: 3px 3px 5px #888888;
+    padding: 15px;
+    width: 100%;
+    height: 100px;
+}
+
+.header h1{
+    color:white;
+    font-size: 30px;
+}
+
+/*Il tag @keyframes viene utilizzato per definire una serie di fotogrammi chiave (keyframes) per un'animazione 
+per specificare i diversi stadi dell'animazione*/
+@keyframes scrollText {
+    0% { transform: translateX(-10%); } /* Posizione iniziale */
+    100% { transform: translateX(10%); } /* Posizione finale */
+}
+
+/* Funzione che definisce l'animazione al testo */
+.scrollingtext {
+    animation: scrollText 15s linear infinite; /* Durata dell'animazione, è "linear" per creare un movimento uniforme con ripetizione infinita*/
+    white-space: nowrap; /*Impedisci il testo a capo*/
+    overflow: hidden; /*Nascondi eventuali testo in eccesso*/
+}
+
+#logo{
+    width: 300px;
+    padding-right: 10px;
+    padding-left: 120px;  
+    z-index: 10; 
+}
+
+.accedialtodx img{
+    width: 30px;
+    margin-right: 10px;
+    color: #17172a;
+}
+
+.accedialtodx span{
+    font-size: 20px;
+    color:#172a17;
+}
+/*Creazione del pulsante in alto a destra dell'header*/
+.header button[id="accedi"]{
+    display: inline-flex;           /*Usato per creare un contenitore flessibile, in cui gli elementi figli vengono disposti in una direzione orizzontale*/
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: white;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*Creazione della tendina, inizialmente nascosta*/
+.tendina{
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 150px;
+    margin-right: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.accedialtodx button:hover{
+    background-color: rgb(196, 201, 204);
+}
+
+/*Quando si passa col cursore del mouse sul pulsante appare la tendina sotto il pulsante*/
+.accedialtodx:hover .tendina{
+    display: block;
+}
+
+.tendina a{
+    color:#17172a;
+    text-decoration: none;
+    padding: 5px 0px;
+}
+
+/*Colorazione degli elementi "a" all'interno della tendina*/
+.tendina a:hover{
+    color:#009dff;
+    text-decoration: none;
+}

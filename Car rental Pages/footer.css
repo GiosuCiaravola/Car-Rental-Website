@@ -1,0 +1,41 @@
+/*Definizione dello stile del footer con l'immagine del logo e le scritte*/
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: column;
+    width: 100%;
+    background-color: #17172a;
+    margin-top:20px;
+    box-shadow: 3px 3px 5px #888888;
+}
+
+.footer img{
+    width: 200px;
+}
+
+.pagedata{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center
+}
+
+.pagedata p{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 15px;
+}
+
+/*tag media per adattare le scritte quando la finestra diventa più piccola di 900px*/
+@media screen and (max-width:900px) {
+    .pagedata p{
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-left: 30px;
+    }
+}
